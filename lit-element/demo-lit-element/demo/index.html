@@ -1,29 +1,13 @@
-<!doctype html>
-<html lang="en-GB">
-<head>
-  <meta charset="utf-8">
-  <style>
-    body {
-      background: #fafafa;
-    }
-  </style>
-</head>
-<body>
-  <div id="demo"></div>
-
-  <script type="module">
-    import { html, render } from 'lit-html';
-    import '../demo-lit-element.js';
-
-    const title = 'Hello owc World!';
-    render(
-      html`
-        <demo-lit-element .title=${title}>
-          some more light-dom
-        </demo-lit-element>
-      `,
-      document.querySelector('#demo')
-    );
-  </script>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <demo-lit-element></demo-lit-element>
+    <script type="module" src="../dist/demo-lit-element.js"></script>
+  </body>
 </html>

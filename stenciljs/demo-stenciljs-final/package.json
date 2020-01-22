@@ -1,5 +1,5 @@
 {
-  "name": "demo-stenciljs",
+  "name": "demo-stenciljs-final",
   "version": "0.0.1",
   "description": "Stencil Component Starter",
   "main": "dist/index.js",
@@ -9,7 +9,7 @@
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/demo-stenciljs/demo-stenciljs.js",
+  "unpkg": "dist/demo-stenciljs-final/demo-stenciljs-final.js",
   "files": [
     "dist/",
     "loader/"
@@ -18,15 +18,11 @@
     "build": "stencil build --docs",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
-    "test.watch": "stencil test --spec --e2e --watchAll"
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "generate": "stencil generate"
   },
   "devDependencies": {
-    "@stencil/core": "^1.0.7",
-    "@types/jest": "24.0.17",
-    "@types/puppeteer": "1.19.1",
-    "jest": "24.8.0",
-    "jest-cli": "24.8.0",
-    "puppeteer": "1.17.0"
+    "@stencil/core": "^1.8.4"
   },
   "license": "MIT"
 }

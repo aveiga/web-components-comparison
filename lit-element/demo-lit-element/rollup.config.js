@@ -1,7 +1,27 @@
-import { createDefaultConfig } from '@open-wc/building-rollup';
+// import postcss from "rollup-plugin-postcss";
+// import resolve from "rollup-plugin-node-resolve";
+// import { terser } from "rollup-plugin-terser";
+// import serve from "rollup-plugin-serve";
+// import livereload from "rollup-plugin-livereload";
+// import copy from "rollup-plugin-copy";
+// import AtImport from "postcss-import";
+import resolve from "rollup-plugin-node-resolve";
+import typescript from "rollup-plugin-typescript2";
 
-// if you need to support IE11 use "modern-and-legacy-config" instead.
-// import { createCompatibilityConfig } from '@open-wc/building-rollup';
-// export default createCompatibilityConfig({ input: './index.html' });
+let plugins = [
+  typescript({
+    target: "es6"
+  }),
+  resolve()
+];
 
-export default createDefaultConfig({ input: './index.html' });
+module.exports = [
+  {
+    input: "src/demo-lit-element.ts",
+    output: {
+      file: "dist/demo-lit-element.js",
+      format: "esm"
+    },
+    plugins: plugins
+  }
+];
