@@ -1,0 +1,55 @@
+import { Story, Preview, Meta, Props, html } from '@open-wc/demoing-storybook';
+
+import '../demo-lit-element.js';
+
+<Meta 
+  title="DemoLitElement"
+  parameters={{
+    component: "demo-lit-element",
+    options: { selectedPanel: "storybookjs/knobs/panel" }
+  }}
+/>
+
+# DemoLitElement
+
+A component for...
+
+## Features:
+
+- a
+- b
+- ...
+
+## How to use
+
+### Installation
+
+```bash
+yarn add demo-lit-element
+```
+
+```js
+import 'demo-lit-element/demo-lit-element.js';
+```
+
+<Preview withToolbar>
+  <Story name="Simple">
+    {html`
+      <demo-lit-element></demo-lit-element>
+    `}
+  </Story>
+</Preview>
+
+## API
+
+<Props of="demo-lit-element" />
+
+## Variations
+
+###### Custom Title
+
+<Story name="Custom Title">
+  {html`
+    <demo-lit-element .title=${'Hello World'}></demo-lit-element>
+  `}
+</Story>
